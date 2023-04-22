@@ -5,7 +5,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:    # 第一个
     server.listen()    # 开启监听
     client, addr = server.accept()    # 接收来自客户端的连接
     with client:
-        print(addr, "connected")
+        print(addr, "connected.")
 
         while True:    # 永真循环，一直监听
             data = client.recv(1024)    # 一次性接受数据的最大长度（字节）
