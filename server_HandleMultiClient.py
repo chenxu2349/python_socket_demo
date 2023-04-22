@@ -2,8 +2,8 @@ import socket
 import threading
 
 
-def handle_client(c, add):
-    print(add, "connected.")
+def handle_client(c, addr):
+    print(addr, "connected.")
 
     while True:  # 永真循环，一直监听
         data = c.recv(1024)  # 一次性接受数据的最大长度（字节）
